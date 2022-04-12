@@ -1,0 +1,234 @@
+body {
+	margin: 0;	
+}
+
+#cielo {
+	height:100vh;
+	width: 100vw;
+	background: url(fondo-nubes.png) repeat-x left bottom;
+	background-color: #06b5ff;
+	animation-name: fondo-cielo;
+	animation-duration: 10s;
+	animation-iteration-count: infinite;
+	animation-timing-function: linear;
+
+	position: relative;
+	overflow: hidden; /*para ocultar el desbordamiento de las nubes */
+}
+@keyframes fondo-cielo {
+	from {
+		background-position: left bottom;
+	}
+	to {
+		background-position: 960px bottom;
+	}
+}
+
+.nube {
+	height:184px;
+	width:281px;
+	background: url(nube.png) no-repeat center center;
+	position: absolute;
+	top: 0;
+	left: -281px;
+}
+
+#nube1 {
+	transform: scale(0.3);
+	opacity: 0.5;
+	animation: animacion-nube-1 8s linear infinite;
+
+
+}
+
+@keyframes animacion-nube-1 {
+	0% {
+		left: -281px;
+		top: 30%;
+	}
+	100% {
+		left: 100%;
+		top: 30%;
+	}
+}
+
+#nube2 {
+	transform: scale(0.8);
+	opacity: 0.8;
+	animation: animacion-nube-2 6s linear infinite;
+}
+
+@keyframes animacion-nube-2 {
+	0% {
+		transform: scale(0.6);
+		left: -281px;
+		opacity: 0.7;
+		top: 10%;
+	}
+
+	33% {
+		transform: scale(0.9);
+		left: 33%;
+		top: 40%;
+		opacity: 1;
+	}
+	66% {
+		transform: scale(0.5);
+		left: 66%;
+		top: 15%;
+		opacity: 0.5;
+	}
+	100% {
+		transform: scale(0.9);
+		left: 100%;
+		top: 35%;
+		opacity: 0.3;
+	}
+}
+
+#nube3 {
+	transform: scale(1);
+	opacity: 1;
+	animation: animacion-nube-3 15s linear infinite;
+}
+
+@keyframes animacion-nube-3 {
+	0% {
+		transform: scale(0.6);
+		opacity: 0.8;
+		left: -281px;
+		top: 0%;
+	}
+
+	33% {
+		transform: scale(0.9);
+		opacity: 0.3;
+		left: 33%;
+		top: 90%;
+	}
+	66% {
+		transform: scale(1);
+		opacity: 1;
+		left: 66%;
+		top: 3%;
+	}
+	100% {
+		transform: scale(0.3);
+		opacity: 0.5;
+		left: 100%;
+		top: 15%;
+	}
+}
+#nube4 {
+	transform: scale(1);
+	opacity: 1;
+	animation: animacion-nube-4 10s linear infinite;
+}
+
+@keyframes animacion-nube-4 {
+	0% {
+		transform: scale(0.1);
+		opacity: 1;
+		left: -281px;
+		top: 0%;
+	}
+
+	20% {
+		transform: scale(0.5);
+		opacity: 0.5;
+		left: 20%;
+		top: 5%;
+	}
+	40% {
+		transform: scale(0.1);
+		opacity: 1;
+		left: 40%;
+		top: 0%;
+	}
+	60% {
+		transform: scale(0.5);
+		opacity: 0.5;
+		left: 60%;
+		top: 5%;
+	}
+	80% {
+		transform: scale(0.1);
+		opacity: 1;
+		left: 80%;
+		top: 0%;
+	}
+	100% {
+		transform: scale(0.5);
+		opacity: 0.5;
+		left: 100%;
+		top: 5%;
+	}
+}
+.avion {
+	height: 194px;
+	width: 281px;
+	background: url(avion.png) no-repeat center center;
+	position: absolute;
+	top: 0;
+	right:-281px;
+}
+#avion1 {
+	transform: scale(1);
+	opacity: 1;
+	animation: animacion-avion-1 6s ease infinite;
+}
+@keyframes animacion-avion-1 {
+	from {
+		top: 100%;
+		right: -281px;
+		transform: scale(0.5) rotate(45deg);
+	}
+	to {
+		top: 0;
+		right: 100%;
+		transform: scale(1.0) rotate(0deg);
+	}
+
+}
+
+.contenedor {
+	/*border: 1px solid red;*/
+	position: absolute;
+	height: 100%;
+	width: 0;
+	top: 0;
+	right:50%;	
+}
+
+#contenedor-1 {
+	transform: scale(0.5);
+	opacity: 1;
+	animation: animacion-contenedor 10s linear infinite;
+}
+
+@keyframes animacion-contenedor {
+	0% {
+		right: -281px;
+		transform: scale(1) rotate(0deg);
+	}
+	25% {
+		right: 50%;
+		transform: scale(1) rotate(0deg);
+	}
+	50% {
+
+		right: 50%;
+		transform: scale(1) rotate(360deg);
+	}
+	100% {
+
+		right: calc(100% + 281px);
+		transform: scale(1) rotate(360deg);
+	}
+
+}
+#avion2 {
+	bottom: 0;
+	top: auto;
+	transform: scale(0.8);
+}
